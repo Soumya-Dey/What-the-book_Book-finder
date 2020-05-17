@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 
 const ResultItem = (props) => {
-    const [isHovered, setHovered] = useState(false);
-
     let authorStr = "";
 
     if (props.info.authors) {
@@ -25,24 +23,17 @@ const ResultItem = (props) => {
                 src={
                     props.info.imageLinks
                         ? props.info.imageLinks.thumbnail
-                        : "./images/not-available.png"
+                        : "./images/not-available.jpg"
                 }
                 alt={props.info.title}
             ></img>
 
             <div className="card-details">
-                {props.info.title.length > 42 ? (
-                    isHovered ? (
-                        <p className="full-title-onHover">{props.info.title}</p>
-                    ) : null
-                ) : null}
                 <a
                     className="book-title"
                     href={props.info.infoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}
                 >
                     {props.info.title.length > 42
                         ? props.info.title.substring(0, 42) + "..."

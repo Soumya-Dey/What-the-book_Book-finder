@@ -192,16 +192,6 @@ a {
     color: rgb(233, 158, 66);
 }
 
-.full-title-onHover {
-    position: absolute;
-    font-size: 1.2em;
-    font-weight: 700;
-    background-color: #fff;
-    color: #303030;
-    width: 204px;
-    transition: all 0.2s ease;
-}
-
 .book-author {
     font-weight: 600;
     font-size: 0.8em;

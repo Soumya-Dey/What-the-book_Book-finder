@@ -28,7 +28,7 @@ const App = () => {
             .then(
                 (result) => {
                     setSearchRes(result.items);
-                    setLoading(falsegit);
+                    setLoading(false);
                 },
                 (error) => console.log(error)
             );
@@ -52,7 +52,7 @@ const App = () => {
                             e.preventDefault();
                             setSearchRes([]);
                             setLoading(true);
-                            searchAllBooks();
+                            setTimeout(() => searchAllBooks(), 800);
                             setShowRes(true);
                         }}
                     >
