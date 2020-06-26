@@ -82,7 +82,7 @@ a {
     position: absolute;
     background-color: #fff;
     width: 74%;
-    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
     border-radius: 6px;
     padding: 32px 46px;
     bottom: 0;
@@ -154,9 +154,9 @@ a {
     background-color: #fff;
     margin: 100px auto;
     width: 74%;
-    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     padding: 32px 46px;
+    border: 1px solid #ccc;
     position: relative;
 }
 
@@ -274,4 +274,55 @@ a {
     left: 44px;
     width: 60px;
     height: 60px;
+}
+
+.quote-container {
+    background-color: #fff;
+    margin: 100px auto;
+    width: 74%;
+    border-radius: 6px;
+    position: relative;
+}
+
+.quote-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #303030b0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    line-height: 1.5;
+    border-radius: 6px 6px 0 0;
+    padding: 32px 46px 32px 76px;
+}
+
+.quote-container span {
+    font-size: 3.2em;
+    font-weight: 800;
+    color: #e99e43;
+    position: absolute;
+    top: 20px;
+    left: 46px;
+}
+
+.quote-author {
+    color: #f5f5f5;
+    background-color: #232f3e;
+    padding: 24px 46px 32px 46px;
+    border-radius: 0 0 6px 6px;
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #303030;
+    margin-bottom: 32px;
+}
+
+.copyright a {
+    color: #303030;
+}
+
+.copyright a:hover {
+    color: #e99e43;
 }

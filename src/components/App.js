@@ -6,6 +6,7 @@ import Header from "./Header";
 import ResultItem from "./ResultItem";
 import Pagination from "./Pagination";
 import Loading from "./Loading";
+import Quote from "./Quote";
 
 // TODO: REPLACE '<YOUR GOOGLE BOOKS API KEY>' WITH YOUR ACTUAL KEY
 
@@ -83,20 +84,35 @@ const App = () => {
 
             {showRes ? (
                 <div className="results-container">
-                    {loading ? <Loading /> : null}
-
-                    {searchRes.map((volume) => {
-                        return (
-                            <ResultItem
-                                key={volume.id}
-                                info={volume.volumeInfo}
-                            />
-                        );
-                    })}
+                    {loading ? (
+                        <Loading />
+                    ) : (
+                        searchRes.map((volume) => {
+                            return (
+                                <ResultItem
+                                    key={volume.id}
+                                    info={volume.volumeInfo}
+                                />
+                            );
+                        })
+                    )}
 
                     <Pagination searchHandler={searchAllBooks} />
                 </div>
-            ) : null}
+            ) : (
+                <Quote />
+            )}
+
+            <p className="copyright">
+                &copy; {new Date().getFullYear()} | Made with 💛 by&nbsp;
+                <a
+                    href="https://github.com/Soumya-Dey"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Soumya
+                </a>
+            </p>
         </div>
     );
 };
