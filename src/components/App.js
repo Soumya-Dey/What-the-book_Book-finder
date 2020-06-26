@@ -53,7 +53,7 @@ const App = () => {
                             e.preventDefault();
                             setSearchRes([]);
                             setLoading(true);
-                            setTimeout(() => searchAllBooks(), 800);
+                            searchAllBooks();
                             setShowRes(true);
                         }}
                     >
